@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Montie Wayne Sheet Metal — Santa Barbara & Goleta</title>
+  <meta name="description" content="Contact Montie Wayne Sheet Metal in Goleta, CA. Call (805) 968-2215 or send a message. Sheet metal fabrication and HVAC serving Santa Barbara." />
+  <link rel="canonical" href="https://mwsheetmetal.com/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1b2d4f; --navy-light: #243a63;
+      --copper: #c47f2a; --copper-light: #d4933e;
+      --sand: #f4ede0; --cream: #faf7f2;
+      --text: #1a1814; --text-mid: #4a443c; --text-light: #7a7168;
+      --white: #ffffff; --rule: rgba(26,45,79,0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 48px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-cta { background: var(--navy) !important; color: var(--white) !important; padding: 10px 22px !important; border-radius: 2px !important; }
+    .nav-mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-mobile-toggle span { display: block; width: 24px; height: 1.5px; background: var(--navy); }
+
+    /* PAGE HEADER */
+    .page-header { padding-top: 72px; background: var(--navy); padding-bottom: 0; }
+    .page-header-inner { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem 3rem; }
+    .page-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; color: var(--white); line-height: 1.1; }
+
+    /* MAIN CONTENT */
+    .contact-section { padding: 0; }
+    .contact-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; min-height: 70vh; }
+
+    /* LEFT — info */
+    .contact-info { background: var(--sand); padding: 4rem 3rem 4rem 2rem; }
+    .info-block { margin-bottom: 3rem; }
+    .info-block:last-child { margin-bottom: 0; }
+    .info-label { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--copper); margin-bottom: 0.75rem; }
+    .info-value { font-size: 16px; font-weight: 300; color: var(--text); line-height: 1.6; }
+    .info-value a { color: var(--navy); text-decoration: none; font-weight: 400; transition: color 0.2s; }
+    .info-value a:hover { color: var(--copper); }
+    .info-value .large { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 400; color: var(--navy); display: block; margin-bottom: 4px; }
+
+    .hours-grid { display: grid; grid-template-columns: auto 1fr; gap: 0.35rem 1.5rem; font-size: 14px; font-weight: 300; color: var(--text-mid); margin-top: 0.5rem; }
+    .hours-day { font-weight: 400; color: var(--text); }
+
+    .map-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; color: var(--copper); text-decoration: none; margin-top: 0.75rem; transition: color 0.2s; }
+    .map-link:hover { color: var(--copper-light); }
+    .map-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    .lic-badge { display: inline-block; background: var(--navy); color: rgba(255,255,255,0.7); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; padding: 6px 14px; border-radius: 2px; margin-top: 2rem; }
+
+    /* RIGHT — form */
+    .contact-form-wrap { background: var(--cream); padding: 4rem 2rem 4rem 3rem; }
+    .form-intro { margin-bottom: 2.5rem; }
+    .form-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 300; color: var(--navy); margin-bottom: 0.5rem; }
+    .form-intro p { font-size: 14px; font-weight: 300; color: var(--text-light); }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1rem; }
+    .form-group label { font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-mid); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text);
+      background: var(--white);
+      border: 1px solid rgba(26,45,79,0.2);
+      border-radius: 2px;
+      padding: 12px 14px;
+      width: 100%;
+      transition: border-color 0.2s;
+      outline: none;
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--copper); }
+    .form-group textarea { resize: vertical; min-height: 120px; line-height: 1.6; }
+    .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a443c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+
+    .btn-submit { width: 100%; background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; border: none; padding: 18px 32px; border-radius: 2px; cursor: pointer; transition: background 0.2s, transform 0.15s; margin-top: 0.5rem; }
+    .btn-submit:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .form-status { margin-top: 1rem; padding: 12px 16px; border-radius: 2px; font-size: 14px; font-weight: 400; display: none; }
+    .form-status.success { background: #eaf3de; color: #3b6d11; border: 1px solid #c0dd97; display: block; }
+    .form-status.error { background: #fcebeb; color: #791f1f; border: 1px solid #f7c1c1; display: block; }
+
+    footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 4rem 2rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo img { height: 40px; width: auto; filter: brightness(0) invert(1); opacity: 0.8; margin-bottom: 1rem; }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; max-width: 240px; }
+    .footer-heading { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact-item { font-size: 13px; font-weight: 300; line-height: 1.6; margin-bottom: 0.6rem; }
+    .footer-contact-item a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    .footer-contact-item a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p, .footer-lic { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-info { padding: 3rem 2rem; }
+      .contact-form-wrap { padding: 3rem 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--rule); padding: 1.5rem 2rem; gap: 1.25rem; }
+    }
+    @media (max-width: 560px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="images/logo-dark.png" alt="Montie Wayne Sheet Metal" /></a>
+    <button class="nav-mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="sheet-metal.html">Sheet Metal</a></li>
+      <li><a href="heating-ac.html">Heating & A/C</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <p class="page-eyebrow">Contact us</p>
+    <h1 class="page-title">Let's talk about<br>your project.</h1>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- INFO -->
+    <div class="contact-info">
+
+      <div class="info-block">
+        <p class="info-label">Phone</p>
+        <div class="info-value">
+          <a href="tel:+18059682215" class="large">(805) 968-2215</a>
+          The fastest way to reach us.
+        </div>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Email</p>
+        <div class="info-value">
+          <a href="mailto:mwsm.sales@gmail.com">mwsm.sales@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Location</p>
+        <div class="info-value">
+          93 Castillian Drive<br>Goleta, CA 93117<br>
+          <em style="font-size:13px; color:var(--text-light);">Enter through the gate in the back lot.</em>
+          <br>
+          <a href="https://www.google.com/maps/place/Montie+Wayne+Sheet+Metal/@34.433063,-119.862205,15z" target="_blank" rel="noopener" class="map-link">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Open in Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Hours</p>
+        <div class="info-value">
+          <div class="hours-grid">
+            <span class="hours-day">Monday – Friday</span><span>7:00 am – 4:30 pm</span>
+            <span class="hours-day">Saturday</span><span>By appointment</span>
+            <span class="hours-day">Sunday</span><span>Closed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Service Area</p>
+        <div class="info-value">Santa Barbara · Goleta · Montecito<br>
+        <span style="font-size:13px; color:var(--text-light);">Larger commercial projects considered beyond these areas.</span></div>
+      </div>
+
+      <div class="info-block">
+        <p class="info-label">Follow Our Work</p>
+        <div class="info-value">
+          <a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px; color:var(--navy); font-weight:400;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            @montiewaynesheetmetal
+          </a>
+        </div>
+      </div>
+
+      <span class="lic-badge">Contractor Lic. #660236 · Licensed · Bonded · Insured</span>
+
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form-wrap">
+      <div class="form-intro">
+        <h2>Send us a message</h2>
+        <p>We'll get back to you as quickly as we can — usually the same business day.</p>
+      </div>
+
+      <div id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(805) 555-0100" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">What can we help you with?</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service</option>
+            <option value="Sheet Metal Fabrication">Sheet Metal Fabrication</option>
+            <option value="Gutters & Downspouts">Gutters & Downspouts</option>
+            <option value="Roofing Metals">Roofing Metals</option>
+            <option value="HVAC Installation">HVAC Installation</option>
+            <option value="HVAC Service / Repair">HVAC Service / Repair</option>
+            <option value="Commercial Project">Commercial Project</option>
+            <option value="Other">Other / Not sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us about your project</label>
+          <textarea id="message" name="message" placeholder="Brief description of what you need — location, scope, timeline, any specific materials or requirements…" required></textarea>
+        </div>
+        <button class="btn-submit" id="submit-btn" onclick="sendEmail()">Send Message</button>
+        <div class="form-status" id="form-status"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><img src="images/logo-dark.png" alt="Montie Wayne Sheet Metal" /></div>
+        <p class="footer-tagline">Family-owned sheet metal fabrication, heating &amp; air conditioning in Santa Barbara and Goleta since 1995.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Services</p>
+        <ul class="footer-links">
+          <li><a href="sheet-metal.html">Sheet Metal</a></li>
+          <li><a href="sheet-metal.html">Custom Gutters</a></li>
+          <li><a href="sheet-metal.html">Roofing Metals</a></li>
+          <li><a href="heating-ac.html">Heating & A/C</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.facebook.com/mwsheetmetal/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <div class="footer-contact-item"><a href="tel:+18059682215">(805) 968-2215</a></div>
+        <div class="footer-contact-item"><a href="mailto:mwsm.sales@gmail.com">mwsm.sales@gmail.com</a></div>
+        <div class="footer-contact-item">93 Castillian Drive<br>Goleta, CA 93117</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Montie Wayne Sheet Metal. All rights reserved.</p>
+      <div style="display:flex;align-items:center;gap:1.25rem;"><p class="footer-lic">Contractor Lic. #660236 · Licensed · Bonded · Insured</p><a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener" aria-label="Instagram" style="color:rgba(255,255,255,0.35);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/mwsheetmetal/" target="_blank" rel="noopener" aria-label="Facebook" style="color:rgba(255,255,255,0.35);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── EmailJS setup ──
+  // Replace these three values with your actual EmailJS credentials:
+  const EMAILJS_PUBLIC_KEY   = 'YOUR_PUBLIC_KEY';   // from EmailJS dashboard → Account → Public Key
+  const EMAILJS_SERVICE_ID   = 'YOUR_SERVICE_ID';   // from EmailJS dashboard → Email Services
+  const EMAILJS_TEMPLATE_ID  = 'YOUR_TEMPLATE_ID';  // from EmailJS dashboard → Email Templates
+
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+  function sendEmail() {
+    const btn    = document.getElementById('submit-btn');
+    const status = document.getElementById('form-status');
+
+    const firstName = document.getElementById('first-name').value.trim();
+    const lastName  = document.getElementById('last-name').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const phone     = document.getElementById('phone').value.trim();
+    const service   = document.getElementById('service').value;
+    const message   = document.getElementById('message').value.trim();
+
+    if (!firstName || !email || !message) {
+      status.className = 'form-status error';
+      status.textContent = 'Please fill in your name, email, and message.';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    status.className = 'form-status';
+    status.textContent = '';
+
+    const templateParams = {
+      from_name:    `${firstName} ${lastName}`,
+      from_email:   email,
+      phone:        phone || 'Not provided',
+      service:      service || 'Not specified',
+      message:      message,
+      to_name:      'MWSM',
+    };
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+      .then(() => {
+        status.className = 'form-status success';
+        status.textContent = 'Message sent! We\'ll be in touch soon.';
+        btn.textContent = 'Message Sent';
+        document.getElementById('first-name').value = '';
+        document.getElementById('last-name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('service').selectedIndex = 0;
+        document.getElementById('message').value = '';
+      })
+      .catch((err) => {
+        console.error('EmailJS error:', err);
+        status.className = 'form-status error';
+        status.textContent = 'Something went wrong. Please call us at (805) 968-2215 or email mwsm.sales@gmail.com directly.';
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+      });
+  }
+</script>
+</body>
+</html>

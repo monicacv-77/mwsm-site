@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heating & Air Conditioning | Montie Wayne Sheet Metal — Santa Barbara</title>
+  <meta name="description" content="Residential and commercial HVAC installation, service, and repair in Santa Barbara and Goleta. Mini-splits, heat pumps, central forced air. Lic. #660236." />
+  <link rel="canonical" href="https://mwsheetmetal.com/heating-ac.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1b2d4f; --navy-light: #243a63;
+      --copper: #c47f2a; --copper-light: #d4933e;
+      --sand: #f4ede0; --sand-dark: #e8ddd0;
+      --cream: #faf7f2; --text: #1a1814;
+      --text-mid: #4a443c; --text-light: #7a7168;
+      --white: #ffffff; --rule: rgba(26,45,79,0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 48px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-cta { background: var(--navy) !important; color: var(--white) !important; padding: 10px 22px !important; border-radius: 2px !important; }
+    .nav-mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-mobile-toggle span { display: block; width: 24px; height: 1.5px; background: var(--navy); }
+
+    .page-hero { padding-top: 72px; background: var(--navy); color: var(--white); }
+    .page-hero-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; }
+    .page-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    .page-intro { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.8; }
+    .page-hero-image { aspect-ratio: 16/9; overflow: hidden; border-radius: 2px; }
+    .page-hero-image img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; }
+
+    .trust-bar { background: var(--copper); padding: 1rem 2rem; }
+    .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .trust-item { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); display: flex; align-items: center; gap: 8px; }
+    .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); flex-shrink: 0; }
+
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 300; color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem; }
+    .section-body { font-size: 16px; font-weight: 300; color: var(--text-mid); line-height: 1.8; max-width: 600px; }
+
+    /* SERVICES */
+    .services-section { background: var(--cream); }
+    .services-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 4rem; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--rule); }
+    .service-card { background: var(--sand); padding: 2.5rem 2rem; }
+    .service-icon { width: 36px; height: 36px; margin-bottom: 1rem; }
+    .service-icon svg { width: 100%; height: 100%; stroke: var(--copper); fill: none; stroke-width: 1.5; }
+    .service-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--navy); margin-bottom: 0.75rem; }
+    .service-card-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.7; }
+
+    /* SYSTEMS */
+    .systems-section { background: var(--sand); }
+    .systems-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .system-list { list-style: none; margin-top: 2rem; }
+    .system-list li { padding: 1rem 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+    .system-list li:last-child { border-bottom: none; }
+    .system-num { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: var(--copper); line-height: 1; padding-top: 2px; }
+    .system-name { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 2px; }
+    .system-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.6; }
+    .systems-image { aspect-ratio: 3/4; overflow: hidden; border-radius: 2px; }
+    .systems-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* BRANDS */
+    .brands-section { background: var(--navy); padding: 4rem 2rem; }
+    .brands-inner { max-width: 1200px; margin: 0 auto; }
+    .brands-section .section-label { color: var(--copper); }
+    .brands-section .section-title { color: var(--white); margin-bottom: 0.5rem; }
+    .brands-section .section-body { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; }
+    .brands-list { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .brand-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.75); font-size: 13px; font-weight: 400; letter-spacing: 0.05em; padding: 8px 20px; border-radius: 2px; }
+
+    /* PROCESS */
+    .process-section { background: var(--cream); }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: var(--rule); margin-top: 3rem; }
+    .process-step { background: var(--sand); padding: 2rem 1.75rem; }
+    .process-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--copper); line-height: 1; margin-bottom: 1rem; }
+    .process-title { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
+    .process-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.7; }
+
+    /* LOCAL */
+    .local-band { background: var(--sand); padding: 4rem 2rem; border-top: 1px solid var(--rule); }
+    .local-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+    .local-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 300; color: var(--navy); line-height: 1.5; font-style: italic; border-left: 2px solid var(--copper); padding-left: 1.5rem; }
+
+    .cta-band { background: var(--navy); padding: 5rem 2rem; }
+    .cta-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .cta-band .section-label { color: var(--copper); }
+    .cta-band .section-title { color: var(--white); margin-bottom: 0.5rem; }
+    .cta-band p { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.65); }
+    .cta-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; flex-shrink: 0; }
+    .btn-primary { display: inline-block; background: var(--copper); color: var(--white); font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 16px 32px; border-radius: 2px; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--copper-light); }
+    .btn-phone { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 400; color: rgba(255,255,255,0.7); text-decoration: none; }
+    .btn-phone svg { width: 16px; height: 16px; stroke: var(--copper); fill: none; stroke-width: 1.5; }
+
+    footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 4rem 2rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo img { height: 40px; width: auto; filter: brightness(0) invert(1); opacity: 0.8; margin-bottom: 1rem; }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; max-width: 240px; }
+    .footer-heading { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact-item { font-size: 13px; font-weight: 300; line-height: 1.6; margin-bottom: 0.6rem; }
+    .footer-contact-item a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    .footer-contact-item a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p, .footer-lic { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 900px) {
+      .page-hero-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .page-hero-image { display: none; }
+      .services-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .service-grid { grid-template-columns: 1fr; }
+      .systems-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .systems-image { display: none; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .local-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--rule); padding: 1.5rem 2rem; gap: 1.25rem; }
+    }
+    @media (max-width: 560px) {
+      .process-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="images/logo-dark.png" alt="Montie Wayne Sheet Metal" /></a>
+    <button class="nav-mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="sheet-metal.html">Sheet Metal</a></li>
+      <li><a href="heating-ac.html" class="active">Heating & A/C</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div>
+      <p class="page-eyebrow">Heating & Air Conditioning</p>
+      <h1 class="page-title">Comfortable year-round.<br>Done right<br>the first time.</h1>
+      <p class="page-intro">Full-service heating and air conditioning for Santa Barbara and Goleta — installation, replacement, and service. Residential and commercial. We know what this climate requires, and we know what the city expects.</p>
+    </div>
+    <div class="page-hero-image">
+      <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1000&q=80&auto=format&fit=crop" alt="HVAC installation" />
+    </div>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="trust-item">Residential & Commercial</span>
+    <span class="trust-dot"></span>
+    <span class="trust-item">Installation & Service</span>
+    <span class="trust-dot"></span>
+    <span class="trust-item">Mini-Splits · Heat Pumps · Central Air</span>
+    <span class="trust-dot"></span>
+    <span class="trust-item">Lic. #660236</span>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="section-inner">
+    <div class="services-intro">
+      <div>
+        <p class="section-label">Heating & air conditioning services</p>
+        <h2 class="section-title">From new installs to emergency service calls</h2>
+      </div>
+      <p class="section-body" style="align-self:end;">We handle the full scope — design, installation, and ongoing service. Whether you're replacing an aging system, adding cooling to a new addition, or need a service call, our techs are courteous, on time, and knowledgeable.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        </div>
+        <h3 class="service-card-title">New Installation</h3>
+        <p class="service-card-desc">System design and full installation for new construction, additions, and replacements. We assess your space, recommend the right system, and install it cleanly and on schedule.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 class="service-card-title">Service & Repair</h3>
+        <p class="service-card-desc">When something isn't working right, we diagnose it accurately and fix it efficiently. We service most major brands and keep our schedules tight so you're not waiting.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="service-card-title">System Design</h3>
+        <p class="service-card-desc">The right system for your space, your budget, and Santa Barbara's building requirements. We help you choose between options and explain the tradeoffs before any money is spent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="systems-section">
+  <div class="section-inner">
+    <div class="systems-grid">
+      <div>
+        <p class="section-label">System types</p>
+        <h2 class="section-title">Every situation has the right solution</h2>
+        <p class="section-body">Santa Barbara's mild climate and mix of older and newer building stock means one size doesn't fit all. We work with a range of system types to match what makes sense for your home or building.</p>
+        <ul class="system-list">
+          <li>
+            <span class="system-num">01</span>
+            <div>
+              <p class="system-name">Ductless Mini-Splits</p>
+              <p class="system-desc">Ideal for older homes, additions, or spaces where ductwork isn't practical. Highly efficient, quiet, easy to zone — and no duct losses, which means less energy wasted.</p>
+            </div>
+          </li>
+          <li>
+            <span class="system-num">02</span>
+            <div>
+              <p class="system-name">Heat Pumps</p>
+              <p class="system-desc">Highly efficient heating and cooling in one system — and a significantly lower carbon footprint than gas. Well-suited to Santa Barbara's mild winters and increasingly required for new construction under California's energy codes.</p>
+            </div>
+          </li>
+          <li>
+            <span class="system-num">03</span>
+            <div>
+              <p class="system-name">Central Forced Air</p>
+              <p class="system-desc">Traditional ducted systems for whole-home comfort. We design, fabricate the ductwork in our shop, and install the full system.</p>
+            </div>
+          </li>
+          <li>
+            <span class="system-num">04</span>
+            <div>
+              <p class="system-name">Commercial HVAC</p>
+              <p class="system-desc">Rooftop units, commercial ventilation, and larger-scale systems for offices, restaurants, and retail. We have the certifications and crew for commercial work.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="systems-image">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop" alt="HVAC system installation" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands-section">
+  <div class="brands-inner">
+    <p class="section-label">Brands we install & service</p>
+    <h2 class="section-title">We work with what works.</h2>
+    <p class="section-body">We install and service most major manufacturers. If you have a preference or an existing system, we can work with it.</p>
+    <div class="brands-list">
+      <span class="brand-pill">Carrier</span>
+      <span class="brand-pill">Bryant</span>
+      <span class="brand-pill">Goodman</span>
+      <span class="brand-pill">York</span>
+      <span class="brand-pill">Fujitsu</span>
+      <span class="brand-pill">LG</span>
+      <span class="brand-pill">Mitsubishi</span>
+      <span class="brand-pill">Lennox</span>
+      <span class="brand-pill">Trane</span>
+      <span class="brand-pill">Most major brands</span>
+    </div>
+  </div>
+</section>
+
+<section class="process-section">
+  <div class="section-inner">
+    <p class="section-label">What to expect</p>
+    <h2 class="section-title">How we work</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <p class="process-num">01</p>
+        <p class="process-title">You call or message us</p>
+        <p class="process-desc">Tell us what you're dealing with — new install, replacement, service call, or just not sure. We'll figure it out from there.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-num">02</p>
+        <p class="process-title">We assess and quote</p>
+        <p class="process-desc">We come out, look at the space, and give you a clear quote. No surprises. If there are options, we explain the tradeoffs.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-num">03</p>
+        <p class="process-title">We schedule and show up</p>
+        <p class="process-desc">Our techs arrive on time. We work efficiently, keep your space clean, and don't disappear mid-job.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-num">04</p>
+        <p class="process-title">Done right, on budget</p>
+        <p class="process-desc">We finish what we said we'd finish, on the timeline we committed to. Senior staff checks in on larger jobs to make sure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="local-band">
+  <div class="local-inner">
+    <div>
+      <p class="section-label">Local knowledge</p>
+      <h2 class="section-title">We know what Santa Barbara requires.</h2>
+      <p class="section-body">HVAC work in Santa Barbara comes with permit requirements, energy codes, and in some cases architectural constraints that out-of-area contractors regularly underestimate. We've been pulling permits and working with city inspectors here for over 30 years. We know what's required before we start, not after.</p>
+    </div>
+    <p class="local-quote">"They have always been professional, on time, courteous and neat — always cleaning up and removing their waste from the jobsite."<br><br><span style="font-size:0.8em; font-style:normal; color: var(--copper);">— Tee G., Santa Barbara Contractor</span></p>
+  </div>
+</div>
+
+<div class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <p class="section-label">Get in touch</p>
+      <h2 class="section-title">Ready to talk about your heating or A/C project?</h2>
+      <p>New install, service call, or just not sure what you need — give us a call.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Request a Quote</a>
+      <a href="tel:+18059682215" class="btn-phone">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 12 19.79 19.79 0 0 1 1.93 3.4 2 2 0 0 1 3.9 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (805) 968-2215
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><img src="images/logo-dark.png" alt="Montie Wayne Sheet Metal" /></div>
+        <p class="footer-tagline">Family-owned sheet metal fabrication, heating & air conditioning in Santa Barbara and Goleta since 1995.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Services</p>
+        <ul class="footer-links">
+          <li><a href="sheet-metal.html">Sheet Metal</a></li>
+          <li><a href="sheet-metal.html">Custom Gutters</a></li>
+          <li><a href="sheet-metal.html">Roofing Metals</a></li>
+          <li><a href="heating-ac.html">Heating & A/C</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.facebook.com/mwsheetmetal/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <div class="footer-contact-item"><a href="tel:+18059682215">(805) 968-2215</a></div>
+        <div class="footer-contact-item"><a href="mailto:mwsm.sales@gmail.com">mwsm.sales@gmail.com</a></div>
+        <div class="footer-contact-item">93 Castillian Drive<br>Goleta, CA 93117</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Montie Wayne Sheet Metal. All rights reserved.</p>
+      <div style="display:flex;align-items:center;gap:1.25rem;"><p class="footer-lic">Contractor Lic. #660236 · Licensed · Bonded · Insured</p><a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener" aria-label="Instagram" style="color:rgba(255,255,255,0.35);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.facebook.com/mwsheetmetal/" target="_blank" rel="noopener" aria-label="Facebook" style="color:rgba(255,255,255,0.35);transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
