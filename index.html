@@ -275,6 +275,9 @@
       color: var(--white);
       padding: 1.25rem 1.75rem;
       border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .hero-badge-num {
@@ -290,7 +293,8 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: rgba(255,255,255,0.65);
-      margin-top: 4px;
+      margin-top: 2px;
+      display: block;
     }
 
     /* ── TRUST BAR ── */
@@ -770,8 +774,8 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <p style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:400; color:var(--navy); margin-bottom:0.75rem; letter-spacing:0.02em;">Montie Wayne Sheet Metal &amp; Heating</p>
-    <p class="hero-eyebrow">Santa Barbara's Sheet Metal Craftsmen</p>
+    <p style="font-family:'Cormorant Garamond',serif; font-size:1.85rem; font-weight:500; color:var(--navy); margin-bottom:0.35rem; letter-spacing:0.02em;">Montie Wayne Sheet Metal &amp; Heating</p>
+    <p class="hero-eyebrow" style="margin-bottom:1rem;">Santa Barbara's Sheet Metal Craftsmen</p>
     <h1 class="hero-title">Built for<br><em>this place.</em><br>Built to last.</h1>
     <p class="hero-body">Family-owned and Goleta-rooted since 1992. We specialize in metal roofs, sheet metal fabrication, custom gutters, and heating & air conditioning. Done by our courteous field team with respect for our clients and surroundings.</p>
     <div class="hero-actions">
@@ -784,12 +788,12 @@
   </div>
   <div class="hero-image">
     <img src="images/Metal-Roofs-cropped.jpg" alt="Metal roofing installation" />
-    <div style="position:absolute; bottom:2rem; left:3rem; display:flex; align-items:center; gap:1.5rem; z-index:3;">
-      <div class="hero-badge">
-        <span class="hero-badge-num">30+</span>
-        <span class="hero-badge-label">Years in Santa Barbara</span>
+    <div style="position:absolute; bottom:2rem; left:3rem; display:flex; align-items:flex-end; gap:1.5rem; z-index:3;">
+      <div class="hero-badge" style="height:108px; box-sizing:border-box;">
+        <span class="hero-badge-num">30+ <span style="font-size:2rem;">Years</span></span>
+        <span class="hero-badge-label">Experience in Santa Barbara</span>
       </div>
-      <img src="images/MWSM-Logo-Dark.PNG" alt="Montie Wayne Sheet Metal" style="height:130px; width:auto; border-radius:2px;" />
+      <img src="images/MWSM-Logo-Dark.PNG" alt="Montie Wayne Sheet Metal" style="height:108px; width:auto; border-radius:2px; display:block;" />
     </div>
   </div>
 </section>
@@ -865,7 +869,7 @@
       <a href="about.html" class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/>
+            <rect x="4" y="2" width="16" height="20" rx="1"/><line x1="9" y1="22" x2="9" y2="12"/><line x1="15" y1="22" x2="15" y2="12"/><rect x="9" y="12" width="6" height="10"/><line x1="8" y1="6" x2="8" y2="6.01"/><line x1="12" y1="6" x2="12" y2="6.01"/><line x1="16" y1="6" x2="16" y2="6.01"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/>
           </svg>
         </div>
         <h3 class="service-title">Residential & Commercial</h3>
