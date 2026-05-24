@@ -73,7 +73,7 @@
     /* STYLES */
     .styles-section { background: var(--sand); }
     .styles-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
-    .styles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: var(--rule); }
+    .styles-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5px; background: var(--rule); }
     .style-card { background: var(--cream); padding: 2.5rem 2rem; }
     .style-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--navy); margin-bottom: 0.75rem; }
     .style-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.75; margin-bottom: 1rem; }
@@ -156,6 +156,33 @@
       .process-grid { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; }
     }
+
+    /* GALLERY */
+    .gallery-section { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid var(--rule); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .gallery-item { cursor: pointer; }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-item:hover .gallery-img-wrap img { transform: scale(1.03); }
+    .gallery-img-wrap { position: relative; aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; background: var(--sand); }
+    .gallery-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
+    .gallery-placeholder { display: flex; align-items: center; justify-content: center; }
+    .gallery-placeholder img { display: none; }
+    .gallery-placeholder::after { content: 'Photo coming soon'; font-family: "DM Sans", sans-serif; font-size: 12px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); }
+    .gallery-overlay { position: absolute; inset: 0; background: rgba(26,45,79,0.45); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+    .gallery-overlay span { color: var(--white); font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.6); padding: 8px 20px; border-radius: 2px; }
+    .gallery-caption { font-size: 12px; font-weight: 400; color: var(--text-light); margin-top: 0.6rem; letter-spacing: 0.04em; }
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(10,14,22,0.93); z-index: 1000; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; }
+    .lightbox.open { display: flex; }
+    .lb-content { max-width: 80vw; max-height: 85vh; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+    .lb-img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 2px; }
+    .lb-caption { color: rgba(255,255,255,0.65); font-size: 13px; font-weight: 300; letter-spacing: 0.06em; }
+    .lb-close { position: fixed; top: 1.5rem; right: 2rem; background: none; border: none; color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer; line-height: 1; z-index: 1001; transition: color 0.2s; }
+    .lb-close:hover { color: var(--white); }
+    .lb-prev, .lb-next { background: none; border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.7); font-size: 1.25rem; width: 44px; height: 44px; border-radius: 2px; cursor: pointer; flex-shrink: 0; transition: all 0.2s; }
+    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.1); color: var(--white); }
+    @media (max-width: 900px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .gallery-grid { grid-template-columns: 1fr; } .lb-content { max-width: 95vw; } }
   </style>
 </head>
 <body>
@@ -180,7 +207,7 @@
 <!-- HERO -->
 <div class="page-hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80&auto=format&fit=crop" alt="Custom gutters on Santa Barbara home" />
+    <img src="images/Copper_Gutters_Roofline" alt="Copper gutters on Santa Barbara roofline" />
   </div>
   <div class="hero-content">
     <p class="page-eyebrow">Gutters & Downspouts</p>
@@ -237,23 +264,28 @@
     <div class="styles-grid">
       <div class="style-card">
         <p class="style-name">K-Style</p>
-        <p class="style-desc">The most common residential gutter profile in the US, a flat bottom and decorative ogee front that mimics crown molding. Available in 4", 5", and 6" widths. Handles high water volume efficiently and works well with most contemporary and traditional home styles.</p>
+        <p class="style-desc">The most common residential gutter profile in the US. K-style has a flat back that mounts flush to the fascia and a shaped front face that resembles crown molding when viewed from below. Available in 4", 5", and 6" widths, it handles high water volume efficiently and suits most home styles.</p>
         <p class="style-best">Most popular for residential homes</p>
       </div>
       <div class="style-card">
-        <p class="style-name">Half-Round</p>
-        <p class="style-desc">A classic semicircular profile that's well-suited to older homes and Spanish Colonial architecture, common throughout Santa Barbara. Half-round gutters are often required or preferred on historic properties and design-reviewed projects. Paired with round or rectangular downspouts.</p>
-        <p class="style-best">Preferred for Spanish Colonial & historic homes</p>
+        <p class="style-name">Half-Round Single Bead</p>
+        <p class="style-desc">A classic U-shaped profile with one rolled front edge. Well-suited to older homes and Spanish Colonial architecture — common throughout Santa Barbara. Often required or preferred on historic properties and design-reviewed projects. Pairs with round or rectangular downspouts.</p>
+        <p class="style-best">Preferred for Spanish Colonial &amp; historic homes</p>
+      </div>
+      <div class="style-card">
+        <p class="style-name">Half-Round Double Bead</p>
+        <p class="style-desc">The same classic U-shape with a rolled edge on both the front and the back. The back bead adds structural strength and allows rod-hung installation where there's no fascia board. Common on older homes and historically significant properties.</p>
+        <p class="style-best">Extra strength, no fascia required</p>
       </div>
       <div class="style-card">
         <p class="style-name">Seamless</p>
-        <p class="style-desc">We run seamless gutters on-site using our own extruding machine, forming continuous sections to the exact length of your roofline with no mid-run joints. Fewer joints means fewer leak points, cleaner appearance, and longer runs without interruption. Available in K-style and most standard profiles.</p>
-        <p class="style-best">Fewer leaks · Cleaner look · Longer runs · Faster install</p>
+        <p class="style-desc">We form seamless gutters on-site using our own extruding machine, creating continuous runs cut to the exact length of your roofline. No mid-run joints means fewer leak points, a cleaner appearance, and less maintenance over time. Available in K-style and most standard profiles.</p>
+        <p class="style-best">Fewer leaks · Cleaner look · Longer runs</p>
       </div>
       <div class="style-card">
-        <p class="style-name">Custom Profile</p>
-        <p class="style-desc">When a standard profile won't work, whether it's an unusual roofline, a historic match requirement, or a design review specification, we fabricate custom. We can work from your architect's drawings, a sample from the existing home, or a city specification.</p>
-        <p class="style-best">For historic, design-reviewed & unusual rooflines</p>
+        <p class="style-name">Hidden Brackets</p>
+        <p class="style-desc">Hidden brackets mount inside the gutter and attach directly to the fascia, keeping all hardware out of sight from the ground. The result is a cleaner, more finished look than traditional exposed spike-and-ferrule or visible hanger installations. They also provide a stronger, more secure hold.</p>
+        <p class="style-best">Cleaner look · Stronger hold · No exposed hardware</p>
       </div>
     </div>
   </div>
@@ -376,6 +408,49 @@
   </div>
 </section>
 
+
+<!-- OUR WORK -->
+<section class="gallery-section">
+  <div class="section-inner">
+    <p class="section-label">Our work</p>
+    <h2 class="section-title">Recent projects</h2>
+    <div class="gallery-grid" id="gallery-gutters">
+      <div class="gallery-item" onclick="openLightbox('gallery-gutters', 0)">
+        <div class="gallery-img-wrap">
+          <img src="images/Copper_Gutter.jpg" alt="Copper half-round gutters, Santa Barbara" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <p class="gallery-caption">Copper half-round gutters, Santa Barbara</p>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('gallery-gutters', 1)">
+        <div class="gallery-img-wrap">
+          <img src="images/Copper_Gutters_Roofline" alt="Copper gutters on roofline, Montecito" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <p class="gallery-caption">Copper gutters on roofline, Montecito</p>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('gallery-gutters', 2)">
+        <div class="gallery-img-wrap">
+          <img src="images/PLACEHOLDER_gutter3.jpg" alt="Seamless K-style gutters" onerror="this.parentElement.classList.add('gallery-placeholder')" />
+          <div class="gallery-overlay"><span>View</span></div>
+        </div>
+        <p class="gallery-caption">Seamless K-style gutters</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb-gallery-gutters" onclick="closeLightbox('gallery-gutters')">
+  <button class="lb-close" onclick="closeLightbox('gallery-gutters')">&times;</button>
+  <button class="lb-prev" onclick="event.stopPropagation(); moveLightbox('gallery-gutters', -1)">&#8592;</button>
+  <div class="lb-content">
+    <img class="lb-img" id="lb-img-gallery-gutters" src="" alt="" />
+    <p class="lb-caption" id="lb-cap-gallery-gutters"></p>
+  </div>
+  <button class="lb-next" onclick="event.stopPropagation(); moveLightbox('gallery-gutters', 1)">&#8594;</button>
+</div>
+
 <!-- CTA -->
 <div class="cta-band">
   <div class="cta-inner">
@@ -436,5 +511,43 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const _galleries = {};
+  function openLightbox(id, idx) {
+    const items = document.querySelectorAll('#gallery-' + id + ' .gallery-item');
+    _galleries[id] = { items, idx };
+    _showLightbox(id);
+    document.getElementById('lb-' + id).classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function _showLightbox(id) {
+    const { items, idx } = _galleries[id];
+    const item = items[idx];
+    const img = item.querySelector('img');
+    const cap = item.querySelector('.gallery-caption');
+    document.getElementById('lb-img-' + id).src = img.src;
+    document.getElementById('lb-img-' + id).alt = img.alt;
+    document.getElementById('lb-cap-' + id).textContent = cap ? cap.textContent : '';
+  }
+  function closeLightbox(id) {
+    document.getElementById('lb-' + id).classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function moveLightbox(id, dir) {
+    const g = _galleries[id];
+    g.idx = (g.idx + dir + g.items.length) % g.items.length;
+    _showLightbox(id);
+  }
+  document.addEventListener('keydown', e => {
+    const open = document.querySelector('.lightbox.open');
+    if (!open) return;
+    const id = open.id.replace('lb-', '');
+    if (e.key === 'ArrowRight') moveLightbox(id, 1);
+    if (e.key === 'ArrowLeft') moveLightbox(id, -1);
+    if (e.key === 'Escape') closeLightbox(id);
+  });
+</script>
+
 </body>
 </html>
