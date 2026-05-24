@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Metal Roofs | Montie Wayne Sheet Metal — Santa Barbara</title>
-  <meta name="description" content="Standing seam, corrugated, and architectural metal roofing systems in Santa Barbara and Goleta. Fire-resistant, built to last. Family-owned. Lic. #660236." />
-  <link rel="canonical" href="https://mwsheetmetal.com/metal-roofs.html" />
+  <title>Metal Roofing Santa Barbara | Montie Wayne Sheet Metal</title>
+  <meta name="description" content="Standing seam, corrugated, copper, and architectural metal roofing in Santa Barbara and Goleta. Fire-resistant, 50+ year lifespan. Fabricated and installed by our crew. Lic. #660236." />
+  <link rel="canonical" href="https://mwsheetmetal.com/metal-roofs" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mwsheetmetal.com/metal-roofs" />
+  <meta property="og:title" content="Metal Roofing Santa Barbara | Montie Wayne Sheet Metal" />
+  <meta property="og:description" content="Standing seam, corrugated, copper, and architectural metal roofing in Santa Barbara. Fire-resistant, 50+ year lifespan. Fabricated and installed by our crew." />
+  <meta property="og:site_name" content="Montie Wayne Sheet Metal & Heating" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -31,60 +37,49 @@
     .nav-mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .nav-mobile-toggle span { display: block; width: 24px; height: 1.5px; background: var(--navy); }
 
-    /* HERO */
-    .page-hero { padding-top: 72px; position: relative; min-height: 65vh; display: flex; align-items: flex-end; overflow: hidden; }
+    .page-hero { padding-top: 72px; position: relative; min-height: 70vh; display: flex; align-items: flex-end; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; }
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
-    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,45,79,0.92) 0%, rgba(26,45,79,0.45) 55%, rgba(26,45,79,0.15) 100%); }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,45,79,0.92) 0%, rgba(26,45,79,0.45) 55%, rgba(26,45,79,0.1) 100%); }
     .hero-content { position: relative; z-index: 2; max-width: 1200px; width: 100%; margin: 0 auto; padding: 4rem 2rem; }
     .page-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
-    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.75rem, 5vw, 5rem); font-weight: 300; color: var(--white); line-height: 1.05; max-width: 700px; margin-bottom: 1.5rem; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.75rem, 5vw, 5rem); font-weight: 300; color: var(--white); line-height: 1.05; max-width: 700px; margin-bottom: 1.25rem; }
     .page-subtitle { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.75); max-width: 520px; line-height: 1.8; }
 
-    /* TRUST BAR */
     .trust-bar { background: var(--copper); padding: 1rem 2rem; }
     .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
-    .trust-item { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); display: flex; align-items: center; gap: 8px; }
+    .trust-item { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); }
     .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); flex-shrink: 0; }
 
-    /* SECTIONS */
     section { padding: 5rem 2rem; }
     .section-inner { max-width: 1200px; margin: 0 auto; }
     .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
     .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 300; color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem; }
     .section-body { font-size: 16px; font-weight: 300; color: var(--text-mid); line-height: 1.8; max-width: 620px; }
-    hr.rule { border: none; border-top: 1px solid var(--rule); }
 
-    /* INTRO */
-    .intro-section { background: var(--cream); }
-    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .intro-image { aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; }
-    .intro-image img { width: 100%; height: 100%; object-fit: cover; }
-    .intro-body p { font-size: 16px; font-weight: 300; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.25rem; }
-    .intro-body p:last-child { margin-bottom: 0; }
+    /* BENEFITS */
+    .benefits-section { background: var(--cream); }
+    .benefits-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; margin-bottom: 4rem; }
+    .benefits-intro-image { aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; }
+    .benefits-intro-image img { width: 100%; height: 100%; object-fit: cover; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--rule); }
+    .benefit-card { background: var(--sand); padding: 2.5rem 2rem; }
+    .benefit-icon { width: 36px; height: 36px; margin-bottom: 1rem; }
+    .benefit-icon svg { width: 100%; height: 100%; stroke: var(--copper); fill: none; stroke-width: 1.5; }
+    .benefit-title { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 0.6rem; }
+    .benefit-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.75; }
 
     /* ROOF TYPES */
     .types-section { background: var(--sand); }
-    .types-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--rule); margin-top: 3.5rem; }
+    .types-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
+    .types-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--rule); }
     .type-card { background: var(--cream); padding: 2.75rem 2.5rem; }
     .type-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--copper); line-height: 1; margin-bottom: 1rem; }
     .type-title { font-size: 15px; font-weight: 500; color: var(--navy); margin-bottom: 0.75rem; }
     .type-desc { font-size: 14px; font-weight: 300; color: var(--text-mid); line-height: 1.75; margin-bottom: 1rem; }
-    .type-specs { list-style: none; }
-    .type-specs li { font-size: 13px; font-weight: 300; color: var(--text-light); padding: 4px 0; display: flex; align-items: center; gap: 8px; }
-    .type-specs li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--copper); flex-shrink: 0; }
+    .type-best { font-size: 12px; font-weight: 500; color: var(--copper); letter-spacing: 0.05em; }
 
-    /* WHY METAL */
-    .why-section { background: var(--cream); }
-    .why-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-bottom: 4rem; }
-    .benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--rule); }
-    .benefit { background: var(--sand); padding: 2rem; }
-    .benefit-icon { width: 32px; height: 32px; margin-bottom: 1rem; }
-    .benefit-icon svg { width: 100%; height: 100%; stroke: var(--copper); fill: none; stroke-width: 1.5; }
-    .benefit-title { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
-    .benefit-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.7; }
-
-    /* SB ADVANTAGE */
+    /* SB */
     .sb-section { background: var(--navy); padding: 5rem 2rem; }
     .sb-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .sb-section .section-label { color: var(--copper); }
@@ -94,7 +89,6 @@
     .sb-image { aspect-ratio: 3/4; overflow: hidden; border-radius: 2px; }
     .sb-image img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
 
-    /* CTA */
     .cta-band { background: var(--sand); padding: 5rem 2rem; }
     .cta-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
     .cta-text .section-title { margin-bottom: 0.5rem; }
@@ -105,7 +99,6 @@
     .btn-phone { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 400; color: var(--text-mid); text-decoration: none; }
     .btn-phone svg { width: 16px; height: 16px; stroke: var(--copper); fill: none; stroke-width: 1.5; }
 
-    /* FOOTER */
     footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 4rem 2rem 2rem; }
     .footer-inner { max-width: 1200px; margin: 0 auto; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
@@ -123,10 +116,10 @@
     .footer-bottom p, .footer-lic { font-size: 12px; color: rgba(255,255,255,0.35); }
 
     @media (max-width: 900px) {
-      .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .types-grid { grid-template-columns: 1fr; }
-      .why-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .benefits-intro { grid-template-columns: 1fr; gap: 3rem; }
       .benefits-grid { grid-template-columns: 1fr 1fr; }
+      .types-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .types-grid { grid-template-columns: 1fr; }
       .sb-inner { grid-template-columns: 1fr; gap: 2rem; }
       .sb-image { display: none; }
       .footer-top { grid-template-columns: 1fr 1fr; }
@@ -150,53 +143,96 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
+      <li><a href="gutters.html">Gutters</a></li>
       <li><a href="sheet-metal.html">Sheet Metal</a></li>
       <li><a href="metal-roofs.html" class="active">Metal Roofs</a></li>
+      <li><a href="heating-ac.html">Heating & A/C</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="page-hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80&auto=format&fit=crop" alt="Metal roof installation Santa Barbara" />
+    <img src="images/Metal-Roofs-cropped.jpg" alt="Metal roof Santa Barbara" />
   </div>
   <div class="hero-content">
-    <p class="page-eyebrow">Metal Roofing Systems</p>
-    <h1 class="page-title">Built to last.<br>Built to look right.</h1>
-    <p class="page-subtitle">A complete metal roof — fabricated in our Goleta shop, installed by our crew. Fire-resistant, low-maintenance, and suited to Santa Barbara's coastal environment and architectural standards.</p>
+    <p class="page-eyebrow">Metal Roofing</p>
+    <h1 class="page-title">A roof that looks great and lasts a lifetime.</h1>
+    <p class="page-subtitle">Metal roofing is one of the smartest investments you can make in your home. Beautiful, fire-resistant, low-maintenance, and built to outlast almost anything else on the market.</p>
   </div>
 </div>
 
 <div class="trust-bar">
   <div class="trust-inner">
-    <span class="trust-item">Standing Seam</span>
+    <span class="trust-item">50+ Year Lifespan</span>
     <span class="trust-dot"></span>
-    <span class="trust-item">Corrugated</span>
+    <span class="trust-item">Class A Fire Rated</span>
     <span class="trust-dot"></span>
-    <span class="trust-item">Architectural Panel</span>
+    <span class="trust-item">Standing Seam · Corrugated · Copper</span>
     <span class="trust-dot"></span>
-    <span class="trust-item">Copper</span>
+    <span class="trust-item">Fabricated & Installed by Us</span>
     <span class="trust-dot"></span>
     <span class="trust-item">Lic. #660236</span>
   </div>
 </div>
 
-<!-- INTRO -->
-<section class="intro-section">
+<!-- BENEFITS -->
+<section class="benefits-section">
   <div class="section-inner">
-    <div class="intro-grid">
-      <div class="intro-image">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&auto=format&fit=crop" alt="Metal roof detail" />
+    <div class="benefits-intro">
+      <div class="benefits-intro-image">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80&auto=format&fit=crop" alt="Metal roof on Santa Barbara home" />
       </div>
-      <div class="intro-body">
-        <p class="section-label">What is a metal roof?</p>
-        <h2 class="section-title">Not just materials — a complete installed system.</h2>
-        <p>A metal roof is different from the roofing metals we fabricate for other contractors. Those are components — drip edge, counter flashing, Z-bar — used in conventional roofing assemblies. A metal roof is the entire finished surface: panels, seaming, trim, and fastening systems, all fabricated in our shop and installed by our own crew.</p>
-        <p>The result is a roof that can last 50 years or more with minimal maintenance — far outlasting asphalt shingles — while offering superior fire resistance, better performance in coastal conditions, and a look that holds up to Santa Barbara's demanding design standards.</p>
-        <p>We fabricate everything in-house, which means tighter tolerances, faster turnaround, and full accountability from measurement to installation.</p>
+      <div>
+        <p class="section-label">Why metal</p>
+        <h2 class="section-title">Built to last. Built to look right.</h2>
+        <p class="section-body">A metal roof is a long-term investment in your home. Installed properly, it can last 50 years or more with minimal maintenance — and it will look better doing it than most alternatives. In Santa Barbara's coastal environment, where salt air, fire risk, and strict design standards all factor in, metal roofing checks every box.</p>
+      </div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="benefit-title">Built to last 50+ years</p>
+        <p class="benefit-desc">A well-installed metal roof outlasts asphalt shingles by decades. You may never need to reroof again. Over the long run, it's often the more economical choice when you factor in replacement costs and maintenance.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+        </div>
+        <p class="benefit-title">Class A fire resistance</p>
+        <p class="benefit-desc">Metal is non-combustible and carries the highest fire rating available. In a region where wildfire risk is real, a metal roof provides meaningful protection for your home and may reduce your insurance premiums.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/></svg>
+        </div>
+        <p class="benefit-title">Stands up to coastal conditions</p>
+        <p class="benefit-desc">Salt air is hard on roofing materials. The right metal roof holds up far better than asphalt or wood in Santa Barbara's coastal environment, with no rotting, warping, or granule loss over time.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
+        </div>
+        <p class="benefit-title">Energy efficient</p>
+        <p class="benefit-desc">Reflective metal finishes reduce heat gain in summer, lowering your cooling costs. Cool-roof rated products meet California energy code requirements and can make a noticeable difference on your utility bills.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <p class="benefit-title">A sustainable choice</p>
+        <p class="benefit-desc">Most metal roofing contains significant recycled content and is 100% recyclable at end of life. It's one of the few roofing materials that doesn't end up in a landfill when it's eventually replaced.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <p class="benefit-title">Looks as good as it performs</p>
+        <p class="benefit-desc">Metal roofing is available in profiles and finishes that suit everything from Spanish Colonial to modern architecture. In Santa Barbara, where design standards are high, a metal roof can meet the most demanding aesthetic requirements.</p>
       </div>
     </div>
   </div>
@@ -205,129 +241,51 @@
 <!-- ROOF TYPES -->
 <section class="types-section">
   <div class="section-inner">
-    <p class="section-label">Roof systems</p>
-    <h2 class="section-title">Four types. One shop. All installed by us.</h2>
+    <div class="types-intro">
+      <div>
+        <p class="section-label">Roof systems</p>
+        <h2 class="section-title">Four systems to suit any home or style</h2>
+      </div>
+      <p class="section-body" style="align-self:end;">We fabricate and install four types of metal roofing. Each has its strengths, and we'll help you choose what's right for your home, your budget, and Santa Barbara's design requirements.</p>
+    </div>
     <div class="types-grid">
-
       <div class="type-card">
         <p class="type-num">01</p>
         <p class="type-title">Standing Seam</p>
-        <p class="type-desc">The modern standard for metal roofing — and the most common choice for high-end residential and commercial work in Santa Barbara. Concealed fasteners mean no exposed screws to leak or back out over time. Clean, architectural lines that work well with the city's design guidelines.</p>
-        <ul class="type-specs">
-          <li>Concealed fastener system</li>
-          <li>Allows for thermal expansion</li>
-          <li>Available in a range of profiles and finishes</li>
-          <li>Excellent for low-slope applications</li>
-        </ul>
+        <p class="type-desc">The premium standard for residential metal roofing. Concealed fasteners mean a clean, uninterrupted surface with no exposed screws. Exceptionally durable, works well on low slopes, and has a crisp architectural look that performs beautifully through Santa Barbara's design review.</p>
+        <p class="type-best">Best for: High-end residential, contemporary and transitional architecture</p>
       </div>
-
       <div class="type-card">
         <p class="type-num">02</p>
         <p class="type-title">Corrugated Panel</p>
-        <p class="type-desc">A classic profile with wide application — residential, agricultural, and light commercial. More economical than standing seam, still durable and long-lasting. Works well on steeper pitches and in situations where a more relaxed aesthetic is appropriate.</p>
-        <ul class="type-specs">
-          <li>Exposed fastener system</li>
-          <li>Cost-effective for larger areas</li>
-          <li>Multiple metal options including Galvalume and painted steel</li>
-          <li>Fast installation on straightforward roof forms</li>
-        </ul>
+        <p class="type-desc">A classic profile that's durable, cost-effective, and well-suited to steeper pitches. Works across a wide range of home styles and is a practical choice where you want the benefits of metal at a more accessible price point.</p>
+        <p class="type-best">Best for: A range of home styles, steeper pitches, value-conscious projects</p>
       </div>
-
       <div class="type-card">
         <p class="type-num">03</p>
         <p class="type-title">Architectural Panel</p>
-        <p class="type-desc">Custom profiles designed to meet specific project requirements — including those set by Santa Barbara's architectural review board. When a standard profile won't satisfy the design review, we fabricate something that will. This is where our in-house shop capability matters most.</p>
-        <ul class="type-specs">
-          <li>Custom profiles fabricated to spec</li>
-          <li>Suited to design-reviewed projects</li>
-          <li>Works with historic and contemporary architecture</li>
-          <li>Full range of metals and finishes</li>
-        </ul>
+        <p class="type-desc">Custom profiles fabricated to meet specific design requirements. When a standard profile needs to match an existing roofline or satisfy a particular architectural review specification, we build it. This is where our in-house fabrication capability makes a real difference.</p>
+        <p class="type-best">Best for: Historic properties, design-reviewed projects, custom rooflines</p>
       </div>
-
       <div class="type-card">
         <p class="type-num">04</p>
-        <p class="type-title">Copper Roofing</p>
-        <p class="type-desc">For historically significant properties, high-end custom homes, and specialty applications where longevity and appearance are both paramount. Copper develops a natural patina over time that is well-suited to Santa Barbara's coastal environment — and often preferred by the city's historic review process.</p>
-        <ul class="type-specs">
-          <li>50–100+ year lifespan</li>
-          <li>Natural patina suited to coastal environments</li>
-          <li>Often required or preferred for historic properties</li>
-          <li>Fully recyclable at end of life</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHY METAL -->
-<section class="why-section">
-  <div class="section-inner">
-    <div class="why-intro">
-      <div>
-        <p class="section-label">Why metal</p>
-        <h2 class="section-title">The case for a metal roof in Santa Barbara</h2>
-      </div>
-      <p class="section-body" style="align-self:end;">Santa Barbara's combination of coastal salt air, occasional high winds, fire risk, and strict design standards makes metal roofing a particularly strong choice here. These aren't just selling points — they're practical realities we've seen play out over 30 years of working in this environment.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <p class="benefit-title">Built to last 50+ years</p>
-        <p class="benefit-desc">A well-installed metal roof outlasts asphalt shingles by decades. In the long run, it's often the more economical choice when you factor in replacement costs.</p>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-        </div>
-        <p class="benefit-title">Class A fire resistance</p>
-        <p class="benefit-desc">Metal is non-combustible and carries the highest fire rating available. In a region where wildfire risk is real, this matters — and may affect your insurance premiums.</p>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><line x1="12" y1="20" x2="12" y2="14"/></svg>
-        </div>
-        <p class="benefit-title">Coastal durability</p>
-        <p class="benefit-desc">Salt air accelerates corrosion on many roofing materials. The right metal roof — Galvalume, painted steel, or copper — holds up far better in Santa Barbara's coastal environment.</p>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>
-        </div>
-        <p class="benefit-title">Energy efficient</p>
-        <p class="benefit-desc">Reflective metal finishes reduce heat gain, lowering cooling loads in summer. Cool-roof rated products qualify for California energy code compliance and may reduce utility costs.</p>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        </div>
-        <p class="benefit-title">Sustainable choice</p>
-        <p class="benefit-desc">Most metal roofing contains significant recycled content and is 100% recyclable at end of life — unlike asphalt shingles, which are a major contributor to landfill waste.</p>
-      </div>
-      <div class="benefit">
-        <div class="benefit-icon">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-        </div>
-        <p class="benefit-title">Design flexibility</p>
-        <p class="benefit-desc">With the right profile and finish, metal roofing can satisfy Santa Barbara's most demanding architectural review requirements — from modern to Spanish Colonial.</p>
+        <p class="type-title">Copper</p>
+        <p class="type-desc">The finest option for homes where appearance and longevity are both paramount. Copper develops a natural verdigris patina over time that is beautifully suited to Santa Barbara's coastal environment and frequently preferred on historic and high-end properties. A copper roof can last 100 years.</p>
+        <p class="type-best">Best for: Historic homes, high-end residential, oceanfront properties</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SB ADVANTAGE -->
+<!-- SB -->
 <div class="sb-section">
   <div class="sb-inner">
     <div>
-      <p class="section-label">Why it matters here</p>
-      <h2 class="section-title">We know what Santa Barbara's review process requires.</h2>
+      <p class="section-label">Local expertise</p>
+      <h2 class="section-title">We know what Santa Barbara requires.</h2>
       <div class="sb-body">
-        <p>Metal roofing projects in Santa Barbara often go through architectural review — and the profile, finish, and color you choose can make the difference between approval and a costly revision.</p>
-        <p>After 30 years fabricating and installing roofing in this market, we know what the city's review board looks for. We've helped clients select materials and profiles that satisfy design guidelines without sacrificing performance or aesthetics. Contractors coming in from outside the area regularly underestimate this — and their clients pay the price in delays.</p>
-        <p>We handle the full scope: design consultation, fabrication, and installation. One company, full accountability.</p>
+        <p>Metal roofing in Santa Barbara often goes through architectural review, and the profile, finish, and color you choose can affect whether your project is approved on the first submission.</p>
+        <p>After 30 years installing roofing in this market, we know what the city's review board looks for. We help you select materials and profiles that satisfy design guidelines without sacrificing performance or aesthetics, and we handle the full scope from fabrication to installation with one crew and full accountability.</p>
       </div>
     </div>
     <div class="sb-image">
@@ -336,13 +294,12 @@
   </div>
 </div>
 
-<!-- CTA -->
 <div class="cta-band">
   <div class="cta-inner">
     <div class="cta-text">
       <p class="section-label">Ready to start?</p>
       <h2 class="section-title">Let's talk about your roof.</h2>
-      <p>Tell us about your project — existing structure, style, timeline — and we'll take it from there.</p>
+      <p>Tell us about your home and what you're looking for. We'll take it from there.</p>
     </div>
     <div class="cta-actions">
       <a href="contact.html" class="btn-primary">Request a Quote</a>
@@ -359,15 +316,15 @@
     <div class="footer-top">
       <div>
         <div class="footer-logo"><img src="images/mwsm-logo.png" alt="Montie Wayne Sheet Metal" /></div>
-        <p class="footer-tagline">Family-owned sheet metal fabrication, heating & air conditioning in Santa Barbara and Goleta since 1995.</p>
+        <p class="footer-tagline">Family-owned sheet metal fabrication, heating & air conditioning in Santa Barbara and Goleta since 1992.</p>
       </div>
       <div>
         <p class="footer-heading">Services</p>
         <ul class="footer-links">
+          <li><a href="gutters.html">Gutters</a></li>
           <li><a href="sheet-metal.html">Sheet Metal</a></li>
           <li><a href="metal-roofs.html">Metal Roofs</a></li>
-          <li><a href="sheet-metal.html">Custom Gutters</a></li>
-          <li><a href="heating-ac.html">Heating &amp; A/C</a></li>
+          <li><a href="heating-ac.html">Heating & A/C</a></li>
         </ul>
       </div>
       <div>
@@ -392,7 +349,6 @@
         <a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener" aria-label="Instagram" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
         </a>
-        
       </div>
     </div>
   </div>

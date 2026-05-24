@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Montie Wayne Sheet Metal | Sheet Metal, A/C & Heating — Santa Barbara</title>
-  <meta name="description" content="Family-owned sheet metal fabrication, HVAC installation and service in Santa Barbara and Goleta since 1995. Licensed, bonded, insured. Lic. #660236." />
+  <title>Montie Wayne Sheet Metal & Heating | Santa Barbara, Goleta & Montecito</title>
+  <meta name="description" content="Family-owned metal roofing, gutters, sheet metal fabrication, and heating & air conditioning in Santa Barbara, Goleta, and Montecito since 1992. Licensed, bonded, insured. Lic. #660236." />
   <link rel="canonical" href="https://mwsheetmetal.com/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mwsheetmetal.com/" />
+  <meta property="og:title" content="Montie Wayne Sheet Metal & Heating | Santa Barbara" />
+  <meta property="og:description" content="Family-owned metal roofing, gutters, sheet metal fabrication, and heating & air conditioning in Santa Barbara, Goleta, and Montecito since 1992." />
+  <meta property="og:site_name" content="Montie Wayne Sheet Metal & Heating" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +23,7 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Montie Wayne Sheet Metal",
+    "name": "Montie Wayne Sheet Metal & Heating",
     "url": "https://mwsheetmetal.com",
     "telephone": "(805) 968-2215",
     "email": "mwsm.sales@gmail.com",
@@ -30,8 +36,19 @@
       "addressCountry": "US"
     },
     "areaServed": ["Santa Barbara", "Goleta", "Montecito"],
-    "description": "Family-owned sheet metal fabrication, HVAC installation and service in Santa Barbara and Goleta.",
-    "licenseNumber": "660236"
+    "description": "Family-owned sheet metal fabrication, gutters, metal roofing, and heating & air conditioning in Santa Barbara and Goleta since 1992.",
+    "foundingDate": "1992",
+    "licenseNumber": "660236",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Gutters & Downspouts" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Metal Roofing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sheet Metal Fabrication" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Heating & Air Conditioning" } }
+      ]
+    }
   }
   </script>
 
@@ -254,14 +271,10 @@
     }
 
     .hero-badge {
-      position: absolute;
-      bottom: 3rem;
-      left: 3rem;
       background: var(--navy);
       color: var(--white);
       padding: 1.25rem 1.75rem;
       border-radius: 2px;
-      z-index: 3;
     }
 
     .hero-badge-num {
@@ -745,6 +758,7 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
+      <li><a href="gutters.html">Gutters</a></li>
       <li><a href="sheet-metal.html">Sheet Metal</a></li>
       <li><a href="metal-roofs.html">Metal Roofs</a></li>
       <li><a href="about.html">About</a></li>
@@ -756,11 +770,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <img src="images/mwsm-logo.png" alt="Montie Wayne Sheet Metal" style="height:90px; width:auto; margin-bottom:1.5rem; display:block; mix-blend-mode:multiply;">
     <p style="font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:400; color:var(--navy); margin-bottom:0.75rem; letter-spacing:0.02em;">Montie Wayne Sheet Metal &amp; Heating</p>
     <p class="hero-eyebrow">Santa Barbara's Sheet Metal Craftsmen</p>
     <h1 class="hero-title">Built for<br><em>this place.</em><br>Built to last.</h1>
-    <p class="hero-body">Family-owned and Goleta-rooted since 1998. We specialize in metal roofs, sheet metal fabrication, custom gutters, and heating & air conditioning. Done by our courteous field team with respect for our clients and surroundings.</p>
+    <p class="hero-body">Family-owned and Goleta-rooted since 1992. We specialize in metal roofs, sheet metal fabrication, custom gutters, and heating & air conditioning. Done by our courteous field team with respect for our clients and surroundings.</p>
     <div class="hero-actions">
       <a href="contact.html" class="btn-primary">Get a Free Quote</a>
       <a href="tel:+18059682215" class="btn-phone">
@@ -771,9 +784,14 @@
   </div>
   <div class="hero-image">
     <img src="images/Metal-Roofs-cropped.jpg" alt="Metal roofing installation" />
-    <div class="hero-badge">
-      <span class="hero-badge-num">30+</span>
-      <span class="hero-badge-label">Years in Santa Barbara</span>
+    <div style="position:absolute; bottom:3rem; left:3rem; display:flex; align-items:stretch; gap:0; z-index:3;">
+      <div class="hero-badge" style="border-radius:2px 0 0 2px;">
+        <span class="hero-badge-num">30+</span>
+        <span class="hero-badge-label">Years in Santa Barbara</span>
+      </div>
+      <div style="background:var(--navy); padding:1.25rem 1.5rem; display:flex; align-items:center; border-left:1px solid rgba(255,255,255,0.15); border-radius:0 2px 2px 0;">
+        <img src="images/MWSM_Logo.PNG" alt="Montie Wayne Sheet Metal" style="height:52px; width:auto;" />
+      </div>
     </div>
   </div>
 </section>
@@ -783,7 +801,7 @@
   <div class="trust-inner">
     <span class="trust-item"><span class="trust-dot"></span>Licensed · Lic. #660236</span>
     <span class="trust-item"><span class="trust-dot"></span>Bonded & Insured</span>
-    <span class="trust-item"><span class="trust-dot"></span>Family Owned Since 1995</span>
+    <span class="trust-item"><span class="trust-dot"></span>Family Owned Since 1992</span>
     <span class="trust-item"><span class="trust-dot"></span>Santa Barbara · Goleta · Montecito</span>
     <span class="trust-item"><span class="trust-dot"></span>High-Efficiency & Low-Carbon Systems</span>
   </div>
@@ -803,14 +821,14 @@
     </div>
     <div class="services-grid">
 
-      <a href="sheet-metal.html" class="service-card">
+      <a href="gutters.html" class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="3 9 12 2 21 9"/><path d="M3 9v11a1 1 0 0 0 1 1h5v-5h4v5h5a1 1 0 0 0 1-1V9"/>
           </svg>
         </div>
-        <h3 class="service-title">Gutters & Sheet Metal</h3>
-        <p class="service-desc">Custom gutters and downspouts, architectural metals, chimney caps, copper work, roofing metals, and high-production fabrication — all done in our Goleta shop.</p>
+        <h3 class="service-title">Gutters & Downspouts</h3>
+        <p class="service-desc">Custom gutters fabricated in our Goleta shop and installed by our own crew. K-style, half-round, copper, aluminum, and custom profiles for any roofline or architectural requirement.</p>
         <span class="service-arrow">
           Learn more
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -839,7 +857,7 @@
           </svg>
         </div>
         <h3 class="service-title">Metal Roofs</h3>
-        <p class="service-desc">Standing seam, corrugated, and architectural metal roofing systems — fire resistant, built for longevity, and suited to Santa Barbara's coastal environment and design standards.</p>
+        <p class="service-desc">Standing seam, corrugated, and architectural metal roofing systems, fire resistant, built for longevity, and suited to Santa Barbara's coastal environment and design standards.</p>
         <span class="service-arrow">
           Learn more
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -853,7 +871,7 @@
           </svg>
         </div>
         <h3 class="service-title">Residential & Commercial</h3>
-        <p class="service-desc">We work on projects of all sizes — from single custom chimney caps to large commercial installations. Local crew, full accountability, and 30 years of Santa Barbara experience.</p>
+        <p class="service-desc">We work on projects of all sizes, from single custom chimney caps to large commercial installations. Local crew, full accountability, and 30 years of Santa Barbara experience.</p>
         <span class="service-arrow">
           About us
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -893,18 +911,18 @@
     <div class="testimonials-grid">
 
       <div class="testimonial">
-        <p class="testimonial-quote">"Not only was the salesperson personable, but was able to answer more of my questions than the others — and their price was comparable, if not lower than the competition. I would recommend them in a heartbeat."</p>
-        <span class="testimonial-author">— Sally Torgenson</span>
+        <p class="testimonial-quote">"Not only was the salesperson personable, but was able to answer more of my questions than the others, and their price was comparable, if not lower than the competition. I would recommend them in a heartbeat."</p>
+        <span class="testimonial-author">Sally Torgenson</span>
       </div>
 
       <div class="testimonial">
         <p class="testimonial-quote">"The price we were quoted was fair and reasonable and the work was superb and completed quickly. They installed ducting for our new range hood and did a beautiful job."</p>
-        <span class="testimonial-author">— Natasha B.</span>
+        <span class="testimonial-author">Natasha B.</span>
       </div>
 
       <div class="testimonial">
-        <p class="testimonial-quote">"They are my go-to fabricators for flashing and copper rain gutters. Always professional, on time, courteous and neat — always cleaning up after themselves. I highly recommend them."</p>
-        <span class="testimonial-author">— Tee G., Santa Barbara Contractor</span>
+        <p class="testimonial-quote">"They are my go-to fabricators for flashing and copper rain gutters. Always professional, on time, courteous and neat, always cleaning up after themselves. I highly recommend them."</p>
+        <span class="testimonial-author">Tee G., Santa Barbara Contractor</span>
       </div>
 
     </div>
@@ -937,14 +955,15 @@
         <div class="footer-logo">
           <img src="images/mwsm-logo.png" alt="Montie Wayne Sheet Metal" />
         </div>
-        <p class="footer-tagline">Family-owned sheet metal fabrication, heating & air conditioning in Santa Barbara and Goleta since 1995.</p>
+        <p class="footer-tagline">Family-owned sheet metal fabrication, heating & air conditioning in Santa Barbara and Goleta since 1992.</p>
       </div>
       <div>
         <p class="footer-heading">Services</p>
         <ul class="footer-links">
+          <li><a href="gutters.html">Gutters</a></li>
+      <li><a href="gutters.html">Gutters</a></li>
           <li><a href="sheet-metal.html">Sheet Metal</a></li>
           <li><a href="metal-roofs.html">Metal Roofs</a></li>
-          <li><a href="sheet-metal.html">Custom Gutters</a></li>
           <li><a href="heating-ac.html">Heating &amp; A/C</a></li>
 
         </ul>

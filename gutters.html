@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Gutters Santa Barbara | Montie Wayne Sheet Metal</title>
+  <meta name="description" content="Seamless and custom gutters in Santa Barbara, Goleta, and Montecito. K-style, half-round, copper, aluminum. Wide color selection. Fabricated and installed by our own crew. Lic. #660236." />
+  <link rel="canonical" href="https://mwsheetmetal.com/gutters" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mwsheetmetal.com/gutters" />
+  <meta property="og:title" content="Custom Gutters Santa Barbara | Montie Wayne Sheet Metal" />
+  <meta property="og:description" content="Seamless and custom gutters in Santa Barbara, Goleta, and Montecito. K-style, half-round, copper, aluminum. Wide color selection. Fabricated and installed by our own crew." />
+  <meta property="og:site_name" content="Montie Wayne Sheet Metal & Heating" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #1b2d4f; --navy-light: #243a63;
+      --copper: #c47f2a; --copper-light: #d4933e;
+      --sand: #f4ede0; --cream: #faf7f2;
+      --text: #1a1814; --text-mid: #4a443c; --text-light: #7a7168;
+      --white: #ffffff; --rule: rgba(26,45,79,0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,247,242,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 48px; width: auto; mix-blend-mode: multiply; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-mid); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--navy); }
+    .nav-cta { background: var(--navy) !important; color: var(--white) !important; padding: 10px 22px !important; border-radius: 2px !important; }
+    .nav-mobile-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .nav-mobile-toggle span { display: block; width: 24px; height: 1.5px; background: var(--navy); }
+
+    /* HERO */
+    .page-hero { padding-top: 72px; position: relative; min-height: 60vh; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,45,79,0.92) 0%, rgba(26,45,79,0.45) 55%, rgba(26,45,79,0.1) 100%); }
+    .hero-content { position: relative; z-index: 2; max-width: 1200px; width: 100%; margin: 0 auto; padding: 4rem 2rem; }
+    .page-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
+    .page-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 4.5vw, 4.5rem); font-weight: 300; color: var(--white); line-height: 1.05; max-width: 700px; margin-bottom: 1.25rem; }
+    .page-subtitle { font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.75); max-width: 500px; line-height: 1.8; }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--copper); padding: 1rem 2rem; }
+    .trust-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .trust-item { font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--white); display: flex; align-items: center; gap: 8px; }
+    .trust-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.5); flex-shrink: 0; }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--copper); margin-bottom: 1rem; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 300; color: var(--navy); line-height: 1.2; margin-bottom: 1.25rem; }
+    .section-body { font-size: 16px; font-weight: 300; color: var(--text-mid); line-height: 1.8; max-width: 620px; }
+    hr.rule { border: none; border-top: 1px solid var(--rule); }
+
+    /* INTRO */
+    .intro-section { background: var(--cream); }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .intro-image { aspect-ratio: 4/3; overflow: hidden; border-radius: 2px; position: relative; }
+    .intro-image img { width: 100%; height: 100%; object-fit: cover; }
+    .intro-image-accent { position: absolute; top: -1.5rem; left: -1.5rem; width: 60%; height: 60%; border: 1.5px solid var(--copper); border-radius: 2px; z-index: -1; }
+    .intro-body p { font-size: 16px; font-weight: 300; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.25rem; }
+    .intro-body p:last-child { margin-bottom: 0; }
+
+    /* STYLES */
+    .styles-section { background: var(--sand); }
+    .styles-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
+    .styles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: var(--rule); }
+    .style-card { background: var(--cream); padding: 2.5rem 2rem; }
+    .style-name { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 400; color: var(--navy); margin-bottom: 0.75rem; }
+    .style-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.75; margin-bottom: 1rem; }
+    .style-best { font-size: 12px; font-weight: 500; color: var(--copper); letter-spacing: 0.06em; }
+
+    /* MATERIALS */
+    .materials-section { background: var(--cream); }
+    .materials-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 4rem; }
+    .materials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--rule); }
+    .material-card { background: var(--sand); padding: 2.5rem 2rem; display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: start; }
+    .material-swatch { width: 40px; height: 40px; border-radius: 2px; flex-shrink: 0; margin-top: 4px; }
+    .material-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--navy); margin-bottom: 0.5rem; }
+    .material-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.7; }
+    .material-note { font-size: 12px; font-weight: 500; color: var(--copper); margin-top: 0.5rem; }
+
+    /* WHY US */
+    .why-section { background: var(--navy); padding: 5rem 2rem; }
+    .why-inner { max-width: 1200px; margin: 0 auto; }
+    .why-section .section-label { color: var(--copper); }
+    .why-section .section-title { color: var(--white); margin-bottom: 3rem; }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .why-item { border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.5rem; }
+    .why-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--copper); margin-bottom: 0.75rem; }
+    .why-title { font-size: 14px; font-weight: 500; color: var(--white); margin-bottom: 0.5rem; }
+    .why-desc { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.65); line-height: 1.7; }
+
+    /* PROCESS */
+    .process-section { background: var(--sand); }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5px; background: var(--rule); margin-top: 3rem; }
+    .process-step { background: var(--cream); padding: 2rem 1.75rem; }
+    .process-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 300; color: var(--copper); line-height: 1; margin-bottom: 1rem; }
+    .process-title { font-size: 14px; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
+    .process-desc { font-size: 13px; font-weight: 300; color: var(--text-mid); line-height: 1.7; }
+
+    /* CTA */
+    .cta-band { background: var(--cream); padding: 5rem 2rem; border-top: 1px solid var(--rule); }
+    .cta-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .cta-text .section-title { margin-bottom: 0.5rem; }
+    .cta-text p { font-size: 15px; font-weight: 300; color: var(--text-mid); }
+    .cta-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; flex-shrink: 0; }
+    .btn-primary { display: inline-block; background: var(--navy); color: var(--white); font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 16px 32px; border-radius: 2px; transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: var(--navy-light); transform: translateY(-1px); }
+    .btn-phone { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 400; color: var(--text-mid); text-decoration: none; }
+    .btn-phone svg { width: 16px; height: 16px; stroke: var(--copper); fill: none; stroke-width: 1.5; }
+
+    /* FOOTER */
+    footer { background: var(--text); color: rgba(255,255,255,0.6); padding: 4rem 2rem 2rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo img { height: 40px; width: auto; filter: brightness(0) invert(1); opacity: 0.8; margin-bottom: 1rem; }
+    .footer-tagline { font-size: 13px; font-weight: 300; line-height: 1.7; max-width: 240px; }
+    .footer-heading { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 1.25rem; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.6rem; }
+    .footer-links a { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-contact-item { font-size: 13px; font-weight: 300; line-height: 1.6; margin-bottom: 0.6rem; }
+    .footer-contact-item a { color: rgba(255,255,255,0.55); text-decoration: none; }
+    .footer-contact-item a:hover { color: var(--white); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom p, .footer-lic { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 900px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .intro-image-accent { display: none; }
+      .styles-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .styles-grid { grid-template-columns: 1fr 1fr; }
+      .materials-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .materials-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--cream); border-bottom: 1px solid var(--rule); padding: 1.5rem 2rem; gap: 1.25rem; }
+    }
+    @media (max-width: 560px) {
+      .why-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="images/mwsm-logo.png" alt="Montie Wayne Sheet Metal" /></a>
+    <button class="nav-mobile-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="gutters.html" class="active">Gutters</a></li>
+      <li><a href="sheet-metal.html">Sheet Metal</a></li>
+      <li><a href="metal-roofs.html">Metal Roofs</a></li>
+      <li><a href="heating-ac.html">Heating & A/C</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1600&q=80&auto=format&fit=crop" alt="Custom gutters on Santa Barbara home" />
+  </div>
+  <div class="hero-content">
+    <p class="page-eyebrow">Gutters & Downspouts</p>
+    <h1 class="page-title">Custom gutters, made and installed by us.</h1>
+    <p class="page-subtitle">The profile you want, the color that matches your home, installed to look great and last. Our experienced crew takes pride in clean, precise work, and it shows.</p>
+  </div>
+</div>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <span class="trust-item">K-Style & Half-Round</span>
+    <span class="trust-dot"></span>
+    <span class="trust-item">Copper · Aluminum · Steel</span>
+    <span class="trust-dot"></span>
+    <span class="trust-item">Custom Sizes & Profiles</span>
+    <span class="trust-dot"></span>
+    <span class="trust-item">Fabricated in Goleta</span>
+    <span class="trust-dot"></span>
+    <span class="trust-item">Lic. #660236</span>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <div class="section-inner">
+    <div class="intro-grid">
+      <div style="position:relative;">
+        <div class="intro-image">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&auto=format&fit=crop" alt="Copper gutter detail" />
+        </div>
+        <div class="intro-image-accent"></div>
+      </div>
+      <div class="intro-body">
+        <p class="section-label">Why it matters</p>
+        <h2 class="section-title">Quality gutters, properly installed.</h2>
+        <p>Gutters are one of the most important lines of defense for your home's foundation, fascia, and landscaping, and in Santa Barbara, seasonal rain events can put real stress on systems that aren't up to spec.</p>
+        <p>We fabricate gutters in our own shop, which means we're not limited to off-the-shelf sizes and profiles. We also run seamless gutters on-site using our extruding gutter machine, continuous runs formed to the exact length of your roofline, with no joints to leak or separate over time. We build what fits your roofline, your downspout locations, and your home's architectural style, and we stock a wide selection of colors so your gutters can match your trim, fascia, or exterior paint exactly. Then our crew installs it properly, with the right slope, the right hangers, and the right connection details.</p>
+        <p>We've been doing this work in Santa Barbara for over 30 years. We know what holds up here and what doesn't.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUTTER STYLES -->
+<section class="styles-section">
+  <div class="section-inner">
+    <div class="styles-intro">
+      <div>
+        <p class="section-label">Gutter profiles</p>
+        <h2 class="section-title">Standard profiles and fully custom sizes</h2>
+      </div>
+      <p class="section-body" style="align-self:end;">We fabricate standard gutter profiles in a range of sizes, and can build custom profiles when the job calls for it. If you're trying to match existing gutters or satisfy an architectural review requirement, we can work from a sample or specification.</p>
+    </div>
+    <div class="styles-grid">
+      <div class="style-card">
+        <p class="style-name">K-Style</p>
+        <p class="style-desc">The most common residential gutter profile in the US, a flat bottom and decorative ogee front that mimics crown molding. Available in 4", 5", and 6" widths. Handles high water volume efficiently and works well with most contemporary and traditional home styles.</p>
+        <p class="style-best">Most popular for residential homes</p>
+      </div>
+      <div class="style-card">
+        <p class="style-name">Half-Round</p>
+        <p class="style-desc">A classic semicircular profile that's well-suited to older homes and Spanish Colonial architecture, common throughout Santa Barbara. Half-round gutters are often required or preferred on historic properties and design-reviewed projects. Paired with round or rectangular downspouts.</p>
+        <p class="style-best">Preferred for Spanish Colonial & historic homes</p>
+      </div>
+      <div class="style-card">
+        <p class="style-name">Seamless</p>
+        <p class="style-desc">We run seamless gutters on-site using our own extruding machine, forming continuous sections to the exact length of your roofline with no mid-run joints. Fewer joints means fewer leak points, cleaner appearance, and longer runs without interruption. Available in K-style and most standard profiles.</p>
+        <p class="style-best">Fewer leaks · Cleaner look · Longer runs · Faster install</p>
+      </div>
+      <div class="style-card">
+        <p class="style-name">Custom Profile</p>
+        <p class="style-desc">When a standard profile won't work, whether it's an unusual roofline, a historic match requirement, or a design review specification, we fabricate custom. We can work from your architect's drawings, a sample from the existing home, or a city specification.</p>
+        <p class="style-best">For historic, design-reviewed & unusual rooflines</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="materials-section">
+  <div class="section-inner">
+    <div class="materials-intro">
+      <div>
+        <p class="section-label">Materials</p>
+        <h2 class="section-title">The right metal for your home and environment</h2>
+      </div>
+      <p class="section-body" style="align-self:end;">Not all gutter materials perform the same in Santa Barbara's coastal environment. Salt air, UV exposure, and seasonal rain cycles affect different metals differently. We'll help you choose what makes sense for your home, your budget, and how long you want it to last.</p>
+    </div>
+    <div class="materials-grid">
+      <div class="material-card">
+        <div class="material-swatch" style="background: linear-gradient(135deg, #b87333, #da8a4e, #b87333);"></div>
+        <div>
+          <p class="material-name">Copper</p>
+          <p class="material-desc">The premium choice. Copper develops a natural verdigris patina over time that's well-suited to Santa Barbara's aesthetic and coastal environment. Extremely long-lasting, a copper gutter system installed properly can last 50 years or more. Often required or preferred on historic and high-end properties.</p>
+          <p class="material-note">Best for: Historic homes, high-end residential, long-term investment</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch" style="background: linear-gradient(135deg, #a0a0a0, #d0d0d0, #a0a0a0);"></div>
+        <div>
+          <p class="material-name">Aluminum</p>
+          <p class="material-desc">Lightweight, rust-resistant, and available in a wide range of baked-on colors to match your home's exterior, trim, or fascia. The most common residential choice for good reason, it performs well in coastal conditions and doesn't require repainting. Available in standard and heavy-gauge.</p>
+          <p class="material-note">Best for: Most residential applications, color-matching to trim & exterior</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch" style="background: linear-gradient(135deg, #6b7280, #9ca3af, #6b7280);"></div>
+        <div>
+          <p class="material-name">Galvanized Steel</p>
+          <p class="material-desc">Stronger than aluminum and suitable for high-load situations. Requires painting to maintain appearance and resist rust in coastal environments. A good choice for commercial applications or where structural strength matters more than weight.</p>
+          <p class="material-note">Best for: Commercial, high-load, or heavy-rainfall applications</p>
+        </div>
+      </div>
+      <div class="material-card">
+        <div class="material-swatch" style="background: linear-gradient(135deg, #c0c0c0, #e8e8e8, #c0c0c0);"></div>
+        <div>
+          <p class="material-name">Stainless Steel</p>
+          <p class="material-desc">The most corrosion-resistant option, particularly well-suited to Santa Barbara's salt air environment. More expensive than aluminum or galvanized, but requires virtually no maintenance and won't rust. A smart long-term choice for oceanfront or high-exposure properties.</p>
+          <p class="material-note">Best for: Oceanfront, high-exposure, or low-maintenance priority</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY MWSM -->
+<section class="why-section">
+  <div class="why-inner">
+    <p class="section-label">Why Montie Wayne</p>
+    <h2 class="section-title">What makes us different</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <p class="why-num">01</p>
+        <p class="why-title">Seamless gutters on-site</p>
+        <p class="why-desc">We bring our extruding gutter machine to your job and form seamless sections right on-site. Continuous runs to the exact length of your roofline, no joints to leak, separate, or collect debris.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-num">02</p>
+        <p class="why-title">We fabricate in-house</p>
+        <p class="why-desc">Beyond seamless, we run our own shop for custom profiles, copper work, and specialty fabrication. Not limited to what a supplier stocks.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-num">03</p>
+        <p class="why-title">We know this environment</p>
+        <p class="why-desc">30 years of installing gutters in Santa Barbara's coastal climate. We know what holds up to salt air, which materials fade, and how to detail a downspout connection that won't leak.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-num">04</p>
+        <p class="why-title">We know the design standards</p>
+        <p class="why-desc">Santa Barbara's architectural review process has specific expectations around materials and profiles. We know what will pass review and what won't, before we start.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-num">05</p>
+        <p class="why-title">Wide color selection</p>
+        <p class="why-desc">We stock gutters in a broad range of colors, whites, tans, grays, browns, and more, so you can match your home's exterior, trim, or fascia precisely. In a city where color palettes matter, that's not a small thing.</p>
+      </div>
+      <div class="why-item">
+        <p class="why-num">06</p>
+        <p class="why-title">Courteous, clean crew</p>
+        <p class="why-desc">We clean up every day. We treat your property with respect and communicate clearly about what we're doing and when. That's not a sales line, it's in every review we've gotten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="section-inner">
+    <p class="section-label">What to expect</p>
+    <h2 class="section-title">How a gutter project works</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <p class="process-num">01</p>
+        <p class="process-title">You reach out</p>
+        <p class="process-desc">Call or send us a message with the basics, property address, what you're looking for, any specific requirements. We'll follow up quickly.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-num">02</p>
+        <p class="process-title">We measure and quote</p>
+        <p class="process-desc">We come out, take accurate measurements, assess the roofline and downspout locations, and give you a clear written quote. We'll recommend the right profile and material for your situation.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-num">03</p>
+        <p class="process-title">We fabricate in our shop</p>
+        <p class="process-desc">Your gutters are made to spec in our Goleta facility. Custom lengths, your chosen profile, your chosen material. No inventory-limited compromises.</p>
+      </div>
+      <div class="process-step">
+        <p class="process-num">04</p>
+        <p class="process-title">Our crew installs</p>
+        <p class="process-desc">We show up on time, install properly, clean up completely, and walk you through the finished work. Most residential gutter jobs are done in a day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <p class="section-label">Get started</p>
+      <h2 class="section-title">Ready for a quote on new gutters?</h2>
+      <p>Call us or send a message, we'll get back to you the same business day.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-primary">Request a Quote</a>
+      <a href="tel:+18059682215" class="btn-phone">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 12 19.79 19.79 0 0 1 1.93 3.4 2 2 0 0 1 3.9 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (805) 968-2215
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo"><img src="images/mwsm-logo.png" alt="Montie Wayne Sheet Metal" /></div>
+        <p class="footer-tagline">Family-owned sheet metal fabrication, heating & air conditioning in Santa Barbara and Goleta since 1992.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Services</p>
+        <ul class="footer-links">
+          <li><a href="gutters.html">Gutters</a></li>
+          <li><a href="sheet-metal.html">Sheet Metal</a></li>
+          <li><a href="metal-roofs.html">Metal Roofs</a></li>
+          <li><a href="heating-ac.html">Heating & A/C</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Company</p>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <div class="footer-contact-item"><a href="tel:+18059682215">(805) 968-2215</a></div>
+        <div class="footer-contact-item"><a href="mailto:mwsm.sales@gmail.com">mwsm.sales@gmail.com</a></div>
+        <div class="footer-contact-item">93 Castillian Drive<br>Goleta, CA 93117</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Montie Wayne Sheet Metal. All rights reserved.</p>
+      <div style="display:flex; align-items:center; gap:1.25rem;">
+        <p class="footer-lic">Contractor Lic. #660236 · Licensed · Bonded · Insured</p>
+        <a href="https://www.instagram.com/montiewaynesheetmetal/" target="_blank" rel="noopener" aria-label="Instagram" style="color:rgba(255,255,255,0.35); transition:color 0.2s;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.35)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
