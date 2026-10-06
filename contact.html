@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Montie Wayne Sheet Metal — Santa Barbara & Goleta</title>
+  <title>Contact | Montie Wayne Sheet Metal, Santa Barbara &amp; Goleta</title>
   <meta name="description" content="Contact Montie Wayne Sheet Metal in Goleta, CA. Call (805) 968-2215 or send a message. Serving Santa Barbara, Goleta, and Montecito. Lic. #660236." />
   <link rel="canonical" href="https://mwsheetmetal.com/contact" />
   <!-- Open Graph -->
@@ -150,8 +150,9 @@
       <li><a href="gutters.html">Gutters</a></li>
       <li><a href="sheet-metal.html">Sheet Metal</a></li>
       <li><a href="metal-roofs.html">Metal Roofs</a></li>
+      <li><a href="heating-ac.html">Heating &amp; A/C</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active nav-cta">Contact Us</a></li>
+      <li><a href="contact.html" class="nav-cta active">Contact Us</a></li>
     </ul>
   </div>
 </nav>
@@ -236,6 +237,10 @@
       </div>
 
       <div id="contact-form">
+        <div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+          <label for="website">Leave this field blank</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
         <div class="form-row">
           <div class="form-group">
             <label for="first-name">First name</label>
@@ -260,8 +265,10 @@
           <label for="service">What can we help you with?</label>
           <select id="service" name="service">
             <option value="" disabled selected>Select a service</option>
+            <option value="Storm-Ready Bundle">Storm-Ready Bundle (El Ni&ntilde;o offer)</option>
             <option value="Sheet Metal Fabrication">Sheet Metal Fabrication</option>
             <option value="Gutters & Downspouts">Gutters & Downspouts</option>
+            <option value="Metal Roofs">Metal Roofs</option>
             <option value="Heating &amp; A/C Installation">Heating &amp; A/C Installation</option>
             <option value="Heating &amp; A/C Service / Repair">Heating &amp; A/C Service / Repair</option>
             <option value="Commercial Project">Commercial Project</option>
@@ -321,15 +328,22 @@
 </footer>
 
 <script>
-  // ── EmailJS setup ──
-  // Replace these three values with your actual EmailJS credentials:
-  const EMAILJS_PUBLIC_KEY   = 'YOUR_PUBLIC_KEY';   // from EmailJS dashboard → Account → Public Key
-  const EMAILJS_SERVICE_ID   = 'YOUR_SERVICE_ID';   // from EmailJS dashboard → Email Services
-  const EMAILJS_TEMPLATE_ID  = 'YOUR_TEMPLATE_ID';  // from EmailJS dashboard → Email Templates
+  // Pre-select the Storm-Ready Bundle when arriving from the homepage offer
+  if (new URLSearchParams(location.search).get('service') === 'storm-ready') {
+    document.getElementById('service').value = 'Storm-Ready Bundle';
+  }
+
+  // EmailJS setup
+  const EMAILJS_PUBLIC_KEY   = '15KXI7rX-esuytBje';
+  const EMAILJS_SERVICE_ID   = 'service_tvnqrkf';
+  const EMAILJS_TEMPLATE_ID  = 'template_qosl3ww';
 
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
   function sendEmail() {
+    // Spam trap: real visitors never see or fill this field
+    if (document.getElementById('website').value !== '') return;
+
     const btn    = document.getElementById('submit-btn');
     const status = document.getElementById('form-status');
 

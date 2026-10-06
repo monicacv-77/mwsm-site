@@ -613,6 +613,104 @@
       color: var(--white);
     }
 
+
+    /* ── STORM READY (El Nino 2026-27, seasonal: remove in spring) ── */
+    .storm { background: var(--cream); }
+    .storm-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .storm-list {
+      list-style: none;
+      margin-top: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem 2.5rem;
+    }
+    .storm-list li { border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+    .storm-item-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+    }
+    .storm-item-desc { font-size: 14px; font-weight: 300; color: var(--text-mid); line-height: 1.7; }
+    .storm-note { font-size: 13px; font-weight: 300; color: var(--text-light); margin-top: 2.5rem; }
+    .storm-note a { color: var(--copper); text-decoration: none; font-weight: 400; }
+    .storm-note a:hover { text-decoration: underline; }
+
+    .offer-card {
+      background: var(--navy);
+      color: var(--white);
+      padding: 2.75rem 2.5rem;
+      border-radius: 2px;
+      border-top: 3px solid var(--copper);
+      position: sticky;
+      top: 100px;
+    }
+    .offer-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--copper-light);
+      margin-bottom: 1rem;
+    }
+    .offer-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      font-weight: 300;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .offer-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.25rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--white);
+    }
+    .offer-price small {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-left: 0.5rem;
+    }
+    .offer-includes { list-style: none; margin: 1.75rem 0; }
+    .offer-includes li {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.85);
+      padding: 0.6rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .offer-includes li:last-child { border-bottom: none; }
+    .offer-includes svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 4px; stroke: var(--copper); fill: none; stroke-width: 2; }
+    .offer-deadline { font-size: 13px; font-weight: 400; color: var(--copper-light); margin-bottom: 1.5rem; }
+    .offer-code {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      border: 1px dashed rgba(255,255,255,0.4);
+      padding: 2px 8px;
+      border-radius: 2px;
+    }
+    .offer-card .btn-primary { background: var(--copper); width: 100%; text-align: center; }
+    .offer-card .btn-primary:hover { background: var(--copper-light); }
+    .offer-card .btn-phone { color: rgba(255,255,255,0.8); margin-top: 1rem; justify-content: center; width: 100%; }
+    .offer-card .btn-phone:hover { color: var(--white); }
+
     /* ── FOOTER ── */
     footer {
       background: var(--text);
@@ -711,6 +809,8 @@
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .about-image-accent { display: none; }
       .testimonials-grid { grid-template-columns: 1fr; }
+      .storm-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .offer-card { position: static; }
       .footer-top { grid-template-columns: 1fr 1fr; }
       .cta-inner { flex-direction: column; }
 
@@ -736,6 +836,8 @@
       .footer-top { grid-template-columns: 1fr; }
       .trust-inner { gap: 1.5rem; }
       .about-stats { grid-template-columns: 1fr 1fr; }
+      .storm-list { grid-template-columns: 1fr; }
+      .offer-card { padding: 2.25rem 1.5rem; }
     }
 
     /* ── ANIMATIONS ── */
@@ -765,6 +867,7 @@
       <li><a href="gutters.html">Gutters</a></li>
       <li><a href="sheet-metal.html">Sheet Metal</a></li>
       <li><a href="metal-roofs.html">Metal Roofs</a></li>
+      <li><a href="heating-ac.html">Heating &amp; A/C</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
     </ul>
@@ -808,6 +911,54 @@
     <span class="trust-item"><span class="trust-dot"></span>High-Efficiency & Low-Carbon Systems</span>
   </div>
 </div>
+
+<!-- STORM READY: El Nino 2026-27 seasonal section. Remove or swap out in spring. -->
+<section class="storm" id="storm-ready">
+  <div class="section-inner storm-grid">
+    <div>
+      <p class="section-label">El Ni&ntilde;o Winter 2026&ndash;27</p>
+      <h2 class="section-title">Get ready before<br>the rain arrives.</h2>
+      <p class="section-body">Forecasters expect a very strong El Ni&ntilde;o this winter, and Santa Barbara County is encouraging residents to prepare now. Heavy rain finds every weak spot on a home, and most of them are in the gutters, downspouts, and flashing. A quick pre-season check can save a lot of trouble later.</p>
+      <ul class="storm-list">
+        <li>
+          <p class="storm-item-title">Gutters that keep up</p>
+          <p class="storm-item-desc">Clean, properly pitched gutters move heavy rain away from your roofline. We clean, repair, and replace gutters, and we can upsize them where a storm will overwhelm what you have.</p>
+        </li>
+        <li>
+          <p class="storm-item-title">Downspouts that carry water away</p>
+          <p class="storm-item-desc">Water that collects against a foundation is where the costly damage starts. We make sure it drains well clear of your home.</p>
+        </li>
+        <li>
+          <p class="storm-item-title">Flashing, chimneys, and roof details</p>
+          <p class="storm-item-desc">Chimneys, skylights, and roof-to-wall joints are where leaks begin. We check and reseal the metal details that keep water out, and fabricate custom chimney caps and crickets.</p>
+        </li>
+        <li>
+          <p class="storm-item-title">Heating ready for cold, wet weeks</p>
+          <p class="storm-item-desc">A heating tune-up before the first storm keeps your home comfortable and your system running safely all season.</p>
+        </li>
+      </ul>
+      <p class="storm-note">Stay informed: sign up for Santa Barbara County emergency alerts at <a href="https://readysbc.org" target="_blank" rel="noopener">ReadySBC.org</a>.</p>
+    </div>
+
+    <aside class="offer-card" aria-label="Storm-Ready Bundle offer">
+      <span class="offer-tag">Limited-time offer</span>
+      <h3 class="offer-title">The Storm-Ready Bundle</h3>
+      <p class="offer-price">$XXX<small>for both visits</small></p>
+      <ul class="offer-includes">
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Gutter cleaning and downspout flush</li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Inspection of gutters, seams, pitch, and flashing</li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Heating system tune-up and safety check</li>
+        <li><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>A short photo report of anything that needs attention</li>
+      </ul>
+      <p class="offer-deadline">Book by November 15. Mention code <span class="offer-code">STORMREADY26</span></p>
+      <a href="contact.html?service=storm-ready" class="btn-primary">Book Your Storm-Ready Visit</a>
+      <a href="tel:+18059682215" class="btn-phone">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 12 19.79 19.79 0 0 1 1.93 3.4 2 2 0 0 1 3.9 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        or call (805) 968-2215
+      </a>
+    </aside>
+  </div>
+</section>
 
 <hr class="rule" />
 
